@@ -1,0 +1,23 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost}}/login/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "jDoe@mail.com",
+    "password": "2024Doe"
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("access_token",data.data.access_token);
+}

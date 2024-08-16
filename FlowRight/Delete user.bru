@@ -1,0 +1,17 @@
+meta {
+  name: Delete user
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{localhost}}/user-management/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+        "user_id":"25d7737d-fd38-4437-8f7b-02c8d0f0c2b7"
+  }
+}

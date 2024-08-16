@@ -1,0 +1,17 @@
+meta {
+  name: Get User
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{localhost}}/user/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_id": "1a245c39-08a2-4490-9f7b-7300fea1a522"
+  }
+}

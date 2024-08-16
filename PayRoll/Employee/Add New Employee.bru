@@ -1,0 +1,25 @@
+meta {
+  name: Add New Employee
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost}}/employee/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "first_name": "John",
+    "last_name" : "Smith",
+    "date_of_birth": "1991-11-12",
+    "gender" : "M",
+    "email": "jSmith@mail.com"
+  }
+}

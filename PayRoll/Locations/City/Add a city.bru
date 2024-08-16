@@ -1,0 +1,25 @@
+meta {
+  name: Add a city
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost}}/city/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "city_name": "AppleCross",
+    "state": "Western Australia",
+    "state_code": "WA",
+    "postal_code": "3906",
+    "has_branch": true
+  }
+}

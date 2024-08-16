@@ -1,0 +1,22 @@
+meta {
+  name: Update Address By Id
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{localhost}}/address/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "address_id":"4c023ff3-20d8-4d74-a4f9-e9c5327eb747",
+    "address": "401 Sussex St"
+  }
+}

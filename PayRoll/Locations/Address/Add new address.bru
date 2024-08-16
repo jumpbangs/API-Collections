@@ -1,0 +1,23 @@
+meta {
+  name: Add new address
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{localhost}}/address/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "address": "Test City",
+    "city_id": "43260f22-a535-4a3d-a029-c74fd80db4f8",
+    "country_id" : "43260f22-a535-4a3d-a029-c74fd80db4f8"
+  }
+}

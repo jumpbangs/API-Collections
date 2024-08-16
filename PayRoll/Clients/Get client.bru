@@ -1,0 +1,15 @@
+meta {
+  name: Get client
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost}}/clients
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Delete a city
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{localhost}}/city/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "city_id" : "9765275b-f02a-4b13-83cf-95c3a59fc562"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Fetch all countries
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost}}/country/
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}

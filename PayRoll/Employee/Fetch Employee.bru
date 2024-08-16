@@ -1,0 +1,21 @@
+meta {
+  name: Fetch Employee
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost}}/employee/
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "user_id": ["4cf0b8ac-ad47-4663-8414-7e46a267c25f"]
+  }
+}

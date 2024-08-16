@@ -1,0 +1,21 @@
+meta {
+  name: Update user payment detail
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{localhost}}/payment/details/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "employee_id": "89055449-2e87-4fa6-a743-2fcb7d21756d"
+  }
+}

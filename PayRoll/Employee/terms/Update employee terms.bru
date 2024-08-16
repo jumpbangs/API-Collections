@@ -1,0 +1,23 @@
+meta {
+  name: Update employee terms
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{localhost}}/employee/terms/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "employee_id": "7c864cfd-908f-4367-9131-4ba6b443e247",
+    "start_date": "2024-04-30",
+    "leave_days":2
+  }
+}

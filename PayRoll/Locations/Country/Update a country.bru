@@ -1,0 +1,23 @@
+meta {
+  name: Update a country
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{localhost}}/country/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "country_id": "fcb54647-025d-4423-8e3b-d7f6927ebc1a",
+    "phone_code" : "61",
+    "currency": "AUD"
+  }
+}

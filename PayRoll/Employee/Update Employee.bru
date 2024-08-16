@@ -1,0 +1,23 @@
+meta {
+  name: Update Employee
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{localhost}}/employee/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "user_id": "4cf0b8ac-ad47-4663-8414-7e46a267c25f",
+    "email": "jDoe@mail.com",
+    "user_role": "M"
+  }
+}

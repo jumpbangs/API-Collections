@@ -1,0 +1,15 @@
+meta {
+  name: Employment Terms
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost}}/employee/terms/
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}

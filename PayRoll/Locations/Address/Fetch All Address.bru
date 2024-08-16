@@ -1,0 +1,15 @@
+meta {
+  name: Fetch All Address
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost}}/address/
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}

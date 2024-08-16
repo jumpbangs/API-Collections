@@ -1,0 +1,22 @@
+meta {
+  name: Update a city
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{localhost}}/city/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "city_id":"43260f22-a535-4a3d-a029-c74fd80db4f8",
+    "has_branch": false
+  }
+}

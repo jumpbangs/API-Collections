@@ -1,0 +1,21 @@
+meta {
+  name: Delete Employee
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{localhost}}/employee/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Token {{access_token}}
+}
+
+body:json {
+  {
+    "user_id": "1c9fde51-6cd5-4df3-b362-ff3dfb7d539b"
+  }
+}
